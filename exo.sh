@@ -8,31 +8,31 @@ elif [ $1 -ge 24 ] || [ $2 -ge 60 ] || [ $3 -ge 60 ]
 then
 	echo "Vos arguments sont mauvais"
 	exit 2
-else
-	if [ $3 -eq 59 ]
+fi
+
+if [ $3 -eq 59 ]
+then
+	if [ $2 -eq 59 ]
 	then
-		if [ $2 -eq 59 ]
+		if [ $1 -eq 23 ]
 		then
-			if [ $1 -eq 23 ]
-			then
-				a="00"
-				b="00"
-				c="00"
-			else
-				a=`expr $1 + 1`
-				b="00"
-				c="00"
-			fi
+			a="00"
+			b="00"
+			c="00"
 		else
-			a=$1
-			b=`expr $2 + 1`
+			a=`expr $1 + 1`
+			b="00"
 			c="00"
 		fi
 	else
 		a=$1
-		b=$2
-		c=`expr $3 + 1`
+		b=`expr $2 + 1`
+		c="00"
 	fi
-
-	echo "il est : $a $b $c"	
+else
+	a=$1
+	b=$2
+	c=`expr $3 + 1`
 fi
+
+echo "il est : $a $b $c"
