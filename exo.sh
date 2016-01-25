@@ -16,23 +16,23 @@ then
 	then
 		if [ $1 -eq 23 ]
 		then
-			a="00"
-			b="00"
-			c="00"
+			h="00"
+			m="00"
+			s="00"
 		else
-			a=`expr $1 + 1`
-			b="00"
-			c="00"
+			h=`expr $1 + 1`
+			m="00"
+			s="00"
 		fi
 	else
-		a=$1
-		b=`expr $2 + 1`
-		c="00"
+		h=$1
+		m=`expr $2 + 1`
+		s="00"
 	fi
 else
-	a=$1
-	b=$2
-	c=`expr $3 + 1`
+	h=$1
+	m=$2
+	s=`expr $3 + 1`
 fi
 
-echo "il est : $a $b $c"
+echo "il est : $h $m $s"
