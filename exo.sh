@@ -4,24 +4,24 @@ if [ $# -ne 3 ]
 then
 	echo "Seuls 3 arguments sont autorisés"
 elif [ $1 -ge 24 ] || [ $2 -ge 60 ] || [ $3 -ge 60 ]
-then 
+then
 	echo "Vos arguments sont mauvais"
 else
 	if [ $3 -eq 59 ]
-	then 
+	then
 		if [ $2 -eq 59 ]
-		then 
+		then
 			if [ $1 -eq 23 ]
-			then 
+			then
 				a="00"
 				b="00"
 				c="00"
-			else 
+			else
 				a=`expr $1 + 1`
 				b="00"
 				c="00"
 			fi
-		else 
+		else
 			a=$1
 			b=`expr $2 + 1`
 			c="00"
