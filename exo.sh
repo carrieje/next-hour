@@ -28,11 +28,9 @@ then
 	fi
 
 	echo "il est : $a $b $c"	
-else 
-	if [ $# -eq 3 ]
-	then 
-		echo "Vos arguments sont mauvais"
-	else
-		echo "Seuls 3 arguments sont autorisés"
-	fi
+elif [ $# -eq 3 ]
+then 
+	echo "Vos arguments sont mauvais"
+else
+	echo "Seuls 3 arguments sont autorisés"
 fi
