@@ -1,7 +1,12 @@
 #!/bin/bash
 
-if [ $# -eq 3 ] && [ $1 -lt 24 ] && [ $2 -lt 60 ] && [ $3 -lt 60 ]  
+if [ $# -ne 3 ]
+then
+	echo "Seuls 3 arguments sont autorisés"
+elif [ $1 -ge 24 ] || [ $2 -ge 60 ] || [ $3 -ge 60 ]
 then 
+	echo "Vos arguments sont mauvais"
+else
 	if [ $3 -eq 59 ]
 	then 
 		if [ $2 -eq 59 ]
@@ -28,9 +33,4 @@ then
 	fi
 
 	echo "il est : $a $b $c"	
-elif [ $# -eq 3 ]
-then 
-	echo "Vos arguments sont mauvais"
-else
-	echo "Seuls 3 arguments sont autorisés"
 fi
