@@ -4,7 +4,7 @@ if [ $# -ne 3 ]
 then
 	echo "Seuls 3 arguments sont autorisés"
 	exit 1
-elif [ $1 -ge 24 ] || [ $2 -ge 60 ] || [ $3 -ge 60 ]
+elif [ $1 -ge 24 -o $2 -ge 60 -o $3 -ge 60 ]
 then
 	echo "Vos arguments sont mauvais"
 	exit 2
